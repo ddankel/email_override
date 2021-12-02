@@ -12,6 +12,7 @@ module EmailOverride
     # @param  mail  [Object]  Mail object being intercepted
     #
     def self.delivering_email(mail)
+      return unless EmailOverride.configuration.enabled
       return if recipient_override.blank?
 
       initial_header = extract_initial_header(mail)
@@ -26,7 +27,6 @@ module EmailOverride
     # @return [String, nil]
     #
     def self.recipient_override
-      # ENV['EMAIL_RECIPIENT_OVERRIDE'] || Settings&.email&.recipient_override
       EmailOverride.configuration.recipient
     end
 

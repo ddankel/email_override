@@ -1,4 +1,5 @@
 module EmailOverride
+
   class Configuration
 
     attr_accessor :recipient
@@ -14,4 +15,5 @@ module EmailOverride
     end
 
   end
+
 end
