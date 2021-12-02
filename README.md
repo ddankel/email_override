@@ -1,28 +1,51 @@
-# EmailOverride
-Short description and motivation.
+# Email Override
 
-## Usage
-How to use my plugin.
+A simple implementation of an ActionMailer interceptor which will catch all outgoing mail and redirect it to a configurable recipient.
 
 ## Installation
-Add this line to your application's Gemfile:
 
-```ruby
-gem 'email_override'
+Add the gem to your Gemfile
+
+```rb
+gem 'email_override', git: 'https://bitbucket.org/pnmg/email_override'
 ```
 
-And then execute:
-```bash
-$ bundle
+...and install it
+
+```sh
+bundle install
 ```
 
-Or install it yourself as:
-```bash
-$ gem install email_override
+## Usage
+
+Create a template initializer and customize it:
+
+```sh
+rails s email_override:initializer
 ```
 
-## Contributing
-Contribution directions go here.
+or create your own using the following template:
 
-## License
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+```rb
+# Configure recipient
+EmailOverride.configure do |config|
+  # Toggle enabled status.  Enabled defaults to true but this value can be used
+  # to disable it or set the enabled status programatically
+  config.enabled = true
+
+  # Set the recipient.  Can be a fixed value or defined via config/env
+  # config.recipient = "test@example.com"
+  # config.recipient = Settings.email.recipient_override
+  # config.recipient = ENV['EMAIL_RECIPIENT_OVERRIDE']
+end
+
+
+# Apply Interceptor to ActionMailer
+ActionMailer::Base.register_interceptor(EmailOverride::RerouteEmailInterceptor)
+```
+
+## Compatibility
+
+RuboCop officially supports the following Ruby implementations:
+
+- Rails 6.1+

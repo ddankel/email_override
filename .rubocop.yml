@@ -1,0 +1,75 @@
+inherit_from:
+  - config/rubocop/default.yml
+  - config/rubocop/rails.yml
+  - config/rubocop/rake.yml
+  - config/rubocop/rspec.yml
+
+inherit_mode:
+  merge:
+    - Exclude
+
+# Common configuration.
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.6
+  TargetRailsVersion: 6.0
+  Exclude:
+    - app/models/ability.rb
+    - test/**/*
+    - db/**/*
+    - config/routes.rb
+    - vendor/*.json
+    - app/services/cafes/temp_json.rb
+    - bin/**/*
+    - node_modules/**/*
+  NewCops: enable
+
+Rails:
+  Enabled: true
+
+Layout/LineLength:
+  Exclude:
+    - spec/**/*
+    - config/initializers/devise.rb
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - app/models/**/*.rb
+
+#######################################################
+#   RAILS NAMESPACE
+
+Rails/ApplicationController:
+  Exclude:
+    - app/controllers/application_controller.rb # Cop errantly detects this file
+    - app/controllers/panels/panel_controller.rb # Base Panel Controller
+
+Rails/Output:
+  Exclude:
+    - app/services/cafes/event_relocator.rb
+    - app/services/cafes/location_cafe_importer.rb
+    - app/services/event_import/bit_importer.rb
+    - app/services/event_import/fundraising_importer.rb
+    - app/services/service/panera_xml/test/**/*.rb
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+Style/Documentation:
+  Exclude:
+    - db/**/*
+
+Metrics/BlockLength:
+  CountAsOne:
+    - array
+    - hash
+
+Metrics/ClassLength:
+  CountAsOne:
+    - array
+    - hash
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - hash

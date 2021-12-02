@@ -1,0 +1,112 @@
+# WARNING:
+#
+# Do not change this file directly.  Make all project-level customizations in
+# the base .rubocop.yml file
+
+require:
+  - rubocop-rails
+
+inherit_mode:
+  merge:
+    - Exclude
+
+AllCops:
+  Exclude:
+    - "node_modules/**/*"
+    - "vendor/**/*"
+    - ".git/**/*"
+    - "bin/**/*"
+    - "tmp/**/*"
+    - "public/system/**/*"
+    - "db/schema.rb"
+  # What version of Rails is the inspected code using?  If a value is specified
+  # for TargetRailsVersion then it is used.  Acceptable values are specificed
+  # as a float (i.e. 5.1); the patch version of Rails should not be included.
+  # If TargetRailsVersion is not set, RuboCop will parse the Gemfile.lock or
+  # gems.locked file to find the version of Rails that has been bound to the
+  # application.  If neither of those files exist, RuboCop will use Rails 5.0
+  # as the default.
+  TargetRailsVersion: ~
+
+Rails/ActiveRecordCallbacksOrder: # (new in 2.7)
+  Enabled: true
+
+Rails/AddColumnIndex: # new in 2.11
+  Enabled: true
+
+Rails/AfterCommitOverride: # (new in 2.8)
+  Enabled: true
+
+Rails/ApplicationController:
+  Exclude:
+    - app/controllers/application_controller.rb # Cop errantly detects this file
+
+Rails/AttributeDefaultBlockValue: # (new in 2.9)
+  Enabled: true
+
+Rails/EagerEvaluationLogMessage: # new in 2.11
+  Enabled: true
+
+Rails/EnvironmentVariableAccess: # (new in 2.10)
+  Enabled: true
+  AllowReads: true
+
+Rails/ExpandedDateRange: # new in 2.11
+  Enabled: true
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/FindById: # (new in 2.7)
+  Enabled: true
+
+Rails/I18nLocaleAssignment: # new in 2.11
+  Enabled: true
+
+Rails/Inquiry: # (new in 2.7)
+  Enabled: true
+
+Rails/MailerName: # (new in 2.7)
+  Enabled: true
+
+Rails/MatchRoute: # (new in 2.7)
+  Enabled: true
+
+Rails/NegateInclude: # (new in 2.7)
+  Enabled: true
+
+Rails/Pluck: # (new in 2.7)
+  Enabled: true
+
+Rails/PluckInWhere: # (new in 2.7)
+  Enabled: true
+
+Rails/RedundantTravelBack: # new in 2.12
+  Enabled: true
+
+Rails/RenderInline: # (new in 2.7)
+  Enabled: true
+
+Rails/RenderPlainText: # (new in 2.7)
+  Enabled: true
+
+Rails/ShortI18n: # (new in 2.7)
+  Enabled: true
+
+Rails/SquishedSQLHeredocs: # (new in 2.8)
+  Enabled: true
+
+Rails/TimeZoneAssignment: # (new in 2.10)
+  Enabled: true
+
+Rails/UnusedIgnoredColumns: # new in 2.11
+  Enabled: true
+
+Rails/WhereEquals: # (new in 2.9)
+  Enabled: true
+
+Rails/WhereExists: # (new in 2.7)
+  Enabled: true
+
+Rails/WhereNot: # (new in 2.8)
+  Enabled: true
