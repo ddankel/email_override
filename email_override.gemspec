@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = EmailOverride::VERSION
   spec.authors     = ["Dave Dankel"]
   spec.email       = ["ddankel@gmail.com"]
-  spec.homepage    = "https://bitbucket.org/pnmg/email_override"
+  spec.homepage    = "https://github.com/ddankel/email_override"
   spec.summary     = "Allows overriding of outgoing email recipients"
   spec.description = "Allows overriding of outgoing email recipients"
   spec.license     = "MIT"
