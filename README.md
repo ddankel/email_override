@@ -21,7 +21,7 @@ $ bundle install
 Create a template initializer and customize it:
 
 ```sh
-rails s email_override:initializer
+rails g email_override:initializer
 ```
 
 or create your own using the following template:
@@ -43,9 +43,3 @@ end
 # Apply Interceptor to ActionMailer
 ActionMailer::Base.register_interceptor(EmailOverride::RerouteEmailInterceptor)
 ```
-
-## Compatibility
-
-RuboCop officially supports the following Ruby implementations:
-
-- Rails 6.1+
