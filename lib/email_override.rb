@@ -3,6 +3,8 @@ require "email_override/railtie"
 require "email_override/configuration"
 require "email_override/reroute_email_interceptor"
 
+# Main gem module
+#
 module EmailOverride
 
   class << self

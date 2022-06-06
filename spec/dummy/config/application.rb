@@ -8,7 +8,9 @@ Bundler.require(*Rails.groups)
 require "email_override"
 
 module Dummy
+
   class Application < Rails::Application
+
     config.load_defaults Rails::VERSION::STRING.to_f
 
     # Configuration for the application, engines, and railties goes here.
@@ -18,5 +20,7 @@ module Dummy
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
   end
+
 end

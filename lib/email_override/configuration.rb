@@ -1,5 +1,7 @@
 module EmailOverride
 
+  # Gem configuration object
+  #
   class Configuration
 
     attr_accessor :recipient

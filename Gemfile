@@ -5,7 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 group :development do
-  gem 'rubocop-presets', git: 'https://github.com/ddankel/rubocop-presets'
+  gem "rubocop-presets", git: "https://github.com/ddankel/rubocop-presets"
   gem "solargraph"
   gem "sqlite3"
 end
