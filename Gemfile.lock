@@ -190,7 +190,7 @@ GEM
     rubocop-rspec (2.13.1)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
-    solargraph (0.46.0)
+    solargraph (0.47.0)
       backport (~> 1.2)
       benchmark
       bundler (>= 1.17.2)
