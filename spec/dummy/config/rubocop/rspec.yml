@@ -15,6 +15,18 @@ RSpec:
     - _spec.rb
     - "(?:^|/)spec/"
 
+RSpec/BeEq: # new in 2.9.0
+  Enabled: true
+
+RSpec/BeNil: # new in 2.9.0
+  Enabled: true
+
+RSpec/ChangeByZero: # new in 2.11.0
+  Enabled: true
+
+RSpec/ClassCheck: # new in 2.13
+  Enabled: true
+
 RSpec/FactoryBot:
   Include:
     - spec/factories.rb
@@ -27,8 +39,30 @@ RSpec/ExcessiveDocstringSpacing: # new in 2.5
 RSpec/IdenticalEqualityAssertion: # new in 2.4
   Enabled: true
 
+RSpec/NoExpectationExample: # new in 2.13
+  Enabled: true
+
 RSpec/SubjectDeclaration: # new in 2.5
   Enabled: true
 
+RSpec/VerifiedDoubleReference: # new in 2.10.0
+  Enabled: true
+
+RSpec/FactoryBot/SyntaxMethods: # new in 2.7
+  Enabled: true
+
 RSpec/Rails/AvoidSetupHook: # new in 2.4
+  Enabled: true
+
+########## RSpec/Capybara/*
+
+RSpec/Capybara/SpecificFinders: # new in 2.13
+  Enabled: true
+
+RSpec/Capybara/SpecificMatcher: # new in 2.12
+  Enabled: true
+
+######### RSpec/Rails/*
+
+RSpec/Rails/HaveHttpStatus: # new in 2.12
   Enabled: true

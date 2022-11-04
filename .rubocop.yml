@@ -76,3 +76,6 @@ Metrics/MethodLength:
   CountAsOne:
     - array
     - hash
+
+Gemspec/RequireMFA:
+  Enabled: false
