@@ -7,7 +7,7 @@ A simple implementation of an ActionMailer interceptor which will catch all outg
 Add the gem to your Gemfile
 
 ```rb
-gem 'email_override', git: 'https://github.com/ddankel/email_override'
+gem 'email_override', git: 'https://github.com/<this_repository_name>'
 ```
 
 ...and install it
