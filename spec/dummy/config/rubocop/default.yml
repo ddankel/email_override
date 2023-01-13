@@ -76,12 +76,21 @@ AllCops:
 
 #################### Gemspec ##########################
 
-Gemspec/DateAssignment:
+Gemspec/DeprecatedAttributeAssignment: # new in 1.30
+  Enabled: true
+
+Gemspec/RequireMFA: # new in 1.23
   Enabled: true
 
 #################### Layout ###########################
 
 Layout/BeginEndAlignment: # (new in 0.91)
+  Enabled: true
+
+Layout/LineContinuationLeadingSpace: # new in 1.31
+  Enabled: true
+
+Layout/LineContinuationSpacing: # new in 1.31
   Enabled: true
 
 Layout/EmptyLines:
@@ -119,7 +128,7 @@ Layout/LineLength:
   URISchemes:
     - http
     - https
-  IgnoredPatterns:
+  AllowedPatterns:
     - "=>"
     - "->"
     - '^(\s)*+#.*'
@@ -153,6 +162,9 @@ Lint/BinaryOperatorWithIdenticalOperands: # (new in 0.89)
   Enabled: false # marked as unsafe as of 0.93
 
 Lint/ConstantDefinitionInBlock: # (new in 0.91)
+  Enabled: true
+
+Lint/ConstantOverwrittenInRescue: # new in 1.31
   Enabled: true
 
 Lint/DeprecatedConstants: # (new in 1.8)
@@ -212,6 +224,9 @@ Lint/MissingSuper: # (new in 0.89)
 Lint/MixedRegexpCaptureTypes: # (new in 0.85)
   Enabled: true
 
+Lint/NonAtomicFileOperation: # new in 1.31
+  Enabled: true
+
 Lint/NoReturnInBeginEndBlocks: # (new in 1.2)
   Enabled: true
 
@@ -231,6 +246,12 @@ Lint/RedundantDirGlobSort: # (new in 1.8)
   Enabled: true
 
 Lint/RedundantSafeNavigation: # (new in 0.93)
+  Enabled: true
+
+Lint/RefinementImportMethods: # new in 1.27
+  Enabled: true
+
+Lint/RequireRangeParentheses: # new in 1.32
   Enabled: true
 
 Lint/RequireRelativeSelfPath: # new in 1.22
@@ -272,6 +293,9 @@ Lint/UselessMethodDefinition: # (new in 0.90)
 Lint/UselessTimes: # (new in 0.91)
   Enabled: true
 
+Lint/UselessRuby2Keywords: # new in 1.23
+  Enabled: true
+
 #################### Metrics ###############################
 
 Metrics/AbcSize:
@@ -306,15 +330,24 @@ Metrics/MethodLength:
   Max: 25
 
 #################### Naming ##############################
+
+Naming/BlockForwarding: # new in 1.24
+  Enabled: true
+  EnforcedStyle: explicit
+
 Naming/VariableNumber:
   EnforcedStyle: snake_case
 
 #################### Security ###############################
 
+Security/CompoundHash: # new in 1.28
+  Enabled: true
+
 Security/IoMethods: # new in 1.22
   Enabled: true
 
 #################### Style ###############################
+
 Style/ArgumentsForwarding: # (new in 1.1)
   Enabled: true
 
@@ -340,16 +373,31 @@ Style/CombinableLoops: # (new in 0.90)
 Style/DocumentDynamicEvalDefinition: # (new in 1.1)
   Enabled: true
 
+Style/EmptyHeredoc: # new in 1.32
+  Enabled: true
+
 Style/EmptyMethod:
   EnforcedStyle: expanded
 
 Style/EndlessMethod: #(new in 1.8)
   Enabled: true
 
+Style/EnvHome: # new in 1.29
+  Enabled: true
+
 Style/ExplicitBlockArgument: # (new in 0.89)
   Enabled: true
 
 Style/ExponentialNotation:
+  Enabled: true
+
+Style/FetchEnvVar: # new in 1.28
+  Enabled: true
+
+Style/FileRead: # new in 1.24
+  Enabled: true
+
+Style/FileWrite: # new in 1.24
   Enabled: true
 
 Style/FrozenStringLiteralComment:
@@ -392,6 +440,15 @@ Style/Lambda:
   Exclude:
     - app/models/**/*.rb
 
+Style/MagicCommentFormat: # new in 1.35
+  Enabled: true
+
+Style/MapCompactWithConditionalBlock: # new in 1.30
+  Enabled: true
+
+Style/MapToHash: # new in 1.24
+  Enabled: true
+
 Style/MixinGrouping:
   EnforcedStyle: grouped
 
@@ -405,6 +462,9 @@ Style/MutableConstant:
 Style/NegatedIfElseCondition: # (new in 1.2)
   Enabled: true
 
+Style/NestedFileDirname: # new in 1.26
+  Enabled: true
+
 Style/NilLambda: # (new in 1.3)
   Enabled: true
 
@@ -413,6 +473,12 @@ Style/NumberedParameters: # new in 1.22
   EnforcedStyle: disallow
 
 Style/NumberedParametersLimit: # new in 1.22
+  Enabled: true
+
+Style/ObjectThen: # new in 1.28
+  Enabled: true
+
+Style/OpenStructUse: # new in 1.23
   Enabled: true
 
 Style/OptionalBooleanParameter: # (new in 0.89)
@@ -432,6 +498,9 @@ Style/RedundantFetchBlock: # (new in 0.86)
   Enabled: true
 
 Style/RedundantFileExtensionInRequire: # (new in 0.88)
+  Enabled: true
+
+Style/RedundantInitialize: # new in 1.27
   Enabled: true
 
 Style/RedundantRegexpCharacterClass: # (new in 0.85)
