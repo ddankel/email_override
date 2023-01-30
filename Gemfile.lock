@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/ddankel/rubocop-presets
-  revision: 1c602adfb93a9f895fc2915ca0dcb96d02c99d9f
+  revision: 9e84eb79198ab646542c36a291a6765ac2b4e2be
   specs:
-    rubocop-presets (1.43)
-      rubocop (>= 1.30, < 1.44)
-      rubocop-performance (>= 1.14, < 1.16)
-      rubocop-rails (>= 2.14.2, < 2.18.0)
-      rubocop-rake (~> 0.6)
-      rubocop-rspec (>= 2.11, < 2.18)
+    rubocop-presets (1.43.0.2)
+      rubocop (~> 1.43.0)
+      rubocop-performance (~> 1.15.0)
+      rubocop-rails (~> 2.17.0)
+      rubocop-rake (~> 0.6.0)
+      rubocop-rspec (~> 2.17.0)
 
 PATH
   remote: .
@@ -81,7 +81,7 @@ GEM
     backport (1.2.0)
     benchmark (0.2.1)
     builder (3.2.4)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     crass (1.0.6)
     diff-lcs (1.5.0)
     e2mmap (0.1.0)
@@ -114,7 +114,7 @@ GEM
     parser (3.2.0.0)
       ast (~> 2.4.1)
     racc (1.6.2)
-    rack (2.2.5)
+    rack (2.2.6.2)
     rack-test (2.0.2)
       rack (>= 1.3)
     rails (6.1.6)
@@ -145,7 +145,7 @@ GEM
       thor (~> 1.0)
     rainbow (3.1.1)
     rake (13.0.6)
-    regexp_parser (2.6.1)
+    regexp_parser (2.6.2)
     reverse_markdown (2.1.1)
       nokogiri
     rexml (3.2.5)
@@ -187,7 +187,7 @@ GEM
       rubocop (>= 1.33.0, < 2.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.17.0)
+    rubocop-rspec (2.17.1)
       rubocop (~> 1.33)
     ruby-progressbar (1.11.0)
     solargraph (0.48.0)
@@ -215,7 +215,7 @@ GEM
     sqlite3 (1.4.3)
     thor (1.2.1)
     tilt (2.0.11)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
     webrick (1.7.0)
