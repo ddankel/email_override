@@ -27,6 +27,9 @@ RSpec/ChangeByZero: # new in 2.11.0
 RSpec/ClassCheck: # new in 2.13
   Enabled: true
 
+RSpec/DuplicatedMetadata: # new in 2.16
+  Enabled: true
+
 RSpec/FactoryBot:
   Include:
     - spec/factories.rb
@@ -42,19 +45,28 @@ RSpec/IdenticalEqualityAssertion: # new in 2.4
 RSpec/NoExpectationExample: # new in 2.13
   Enabled: true
 
+RSpec/PendingWithoutReason: # new in 2.16
+  Enabled: true
+
+RSpec/SortMetadata: # new in 2.14
+  Enabled: true
+
 RSpec/SubjectDeclaration: # new in 2.5
   Enabled: true
 
 RSpec/VerifiedDoubleReference: # new in 2.10.0
   Enabled: true
 
-RSpec/FactoryBot/SyntaxMethods: # new in 2.7
-  Enabled: true
-
-RSpec/Rails/AvoidSetupHook: # new in 2.4
-  Enabled: true
-
 ########## RSpec/Capybara/*
+
+RSpec/Capybara/MatchStyle: # new in 2.17
+  Enabled: true
+
+RSpec/Capybara/NegationMatcher: # new in 2.14
+  Enabled: true
+
+RSpec/Capybara/SpecificActions: # new in 2.14
+  Enabled: true
 
 RSpec/Capybara/SpecificFinders: # new in 2.13
   Enabled: true
@@ -64,5 +76,25 @@ RSpec/Capybara/SpecificMatcher: # new in 2.12
 
 ######### RSpec/Rails/*
 
+RSpec/Rails/AvoidSetupHook: # new in 2.4
+  Enabled: true
+
 RSpec/Rails/HaveHttpStatus: # new in 2.12
+  Enabled: true
+
+RSpec/Rails/InferredSpecType: # new in 2.14
+  Enabled: false
+
+RSpec/Rails/MinitestAssertions: # new in 2.17
+  Enabled: true
+
+######### RSpec/FactoryBot/*
+
+RSpec/FactoryBot/ConsistentParenthesesStyle: # new in 2.14
+  Enabled: true
+
+RSpec/FactoryBot/FactoryNameStyle: # new in 2.16
+  Enabled: true
+
+RSpec/FactoryBot/SyntaxMethods: # new in 2.7
   Enabled: true
