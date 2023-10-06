@@ -1,8 +1,8 @@
-inherit_from:
-  - config/rubocop/default.yml
-  - config/rubocop/rails.yml
-  - config/rubocop/rake.yml
-  - config/rubocop/rspec.yml
+inherit_gem:
+  rubocop-presets:
+    - config/default.yml
+    - config/rails.yml
+    - config/rspec.yml
 
 inherit_mode:
   merge:
