@@ -102,6 +102,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.9)
     minitest (5.20.0)
     net-imap (0.3.4)
       date
@@ -112,7 +113,10 @@ GEM
       timeout
     net-smtp (0.3.3)
       net-protocol
-    nio4r (2.5.8)
+    nio4r (2.7.5)
+    nokogiri (1.13.10)
+      mini_portile2 (~> 2.8.0)
+      racc (~> 1.4)
     nokogiri (1.13.10-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.13.10-x86_64-linux)
@@ -211,7 +215,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.3)
+    sqlite3 (1.7.3)
+      mini_portile2 (~> 2.8.0)
     thor (1.2.2)
     timeout (0.3.1)
     tzinfo (2.0.6)
@@ -224,13 +229,14 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
   email_override!
   rspec-rails
   rubocop-presets!
-  sqlite3
+  sqlite3 (~> 1.4)
 
 BUNDLED WITH
-   2.2.26
+   2.6.9

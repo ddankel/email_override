@@ -7,7 +7,7 @@ gemspec
 group :development do
   gem "rspec-rails"
   gem "rubocop-presets", git: "https://github.com/ddankel/rubocop-presets"
-  gem "sqlite3"
+  gem "sqlite3", "~> 1.4"
 end
 
 # To use a debugger
