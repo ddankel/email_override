@@ -78,26 +78,18 @@ GEM
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
     ast (2.4.2)
-    backport (1.2.0)
     base64 (0.1.1)
-    benchmark (0.2.1)
     builder (3.2.4)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.3)
     diff-lcs (1.5.0)
-    e2mmap (0.1.0)
     erubi (1.12.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    jaro_winkler (1.5.4)
     json (2.6.3)
-    kramdown (2.4.0)
-      rexml
-    kramdown-parser-gfm (1.1.0)
-      kramdown (~> 2.0)
     language_server-protocol (3.17.0.3)
     loofah (2.21.3)
       crass (~> 1.0.2)
@@ -161,10 +153,7 @@ GEM
       thor (~> 1.0)
     rainbow (3.1.1)
     rake (13.0.6)
-    rbs (2.8.4)
     regexp_parser (2.8.1)
-    reverse_markdown (2.1.1)
-      nokogiri
     rexml (3.2.6)
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
@@ -215,22 +204,6 @@ GEM
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
-    solargraph (0.49.0)
-      backport (~> 1.2)
-      benchmark
-      bundler (~> 2.0)
-      diff-lcs (~> 1.4)
-      e2mmap
-      jaro_winkler (~> 1.5)
-      kramdown (~> 2.3)
-      kramdown-parser-gfm (~> 1.1)
-      parser (~> 3.0)
-      rbs (~> 2.0)
-      reverse_markdown (~> 2.0)
-      rubocop (~> 1.38)
-      thor (~> 1.0)
-      tilt (~> 2.0)
-      yard (~> 0.9, >= 0.9.24)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -240,7 +213,6 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.4.3)
     thor (1.2.2)
-    tilt (2.1.0)
     timeout (0.3.1)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -248,7 +220,6 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    yard (0.9.32)
     zeitwerk (2.6.12)
 
 PLATFORMS
@@ -259,7 +230,6 @@ DEPENDENCIES
   email_override!
   rspec-rails
   rubocop-presets!
-  solargraph
   sqlite3
 
 BUNDLED WITH

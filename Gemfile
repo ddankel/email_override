@@ -7,7 +7,6 @@ gemspec
 group :development do
   gem "rspec-rails"
   gem "rubocop-presets", git: "https://github.com/ddankel/rubocop-presets"
-  gem "solargraph"
   gem "sqlite3"
 end
 
