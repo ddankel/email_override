@@ -1,5 +1,3 @@
-require "ostruct"
-
 module EmailOverride
 
   # Intercept any outgoing mail and direct it to a specified acount
@@ -8,6 +6,8 @@ module EmailOverride
   # Settings.email.recipient_override setting is present.
   #
   class RerouteEmailInterceptor
+
+    OriginalHeader = Struct.new(:to, :cc, :bcc, keyword_init: true)
 
     # Intercept the mail upon delivery and make the specified changes
     #
@@ -36,14 +36,12 @@ module EmailOverride
     # Extract the initial recipients from the mail object
     #
     # @param  mail  [Object]  Mail object being intercepted
-    # @return [OpenStruct]
+    # @return [OriginalHeader]
     #
     def self.extract_initial_header(mail)
-      original = OpenStruct.new
-      original.to = mail.header[:to].to_s
-      original.cc = mail.header[:cc].to_s
-      original.bcc = mail.header[:bcc].to_s
-      original
+      OriginalHeader.new(to:  mail.header[:to].to_s,
+                         cc:  mail.header[:cc].to_s,
+                         bcc: mail.header[:bcc].to_s)
     end
 
 
@@ -62,7 +60,7 @@ module EmailOverride
 
     # Compile all recipient changes to a string for display/reporting purposes
     #
-    # @param  headers   [OpenStruct]  Original email recipient headers
+    # @param  headers   [OriginalHeader]  Original email recipient headers
     # @return [String]
     #
     def self.stringify_header(headers)
