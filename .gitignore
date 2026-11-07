@@ -6,3 +6,4 @@
 .byebug_history
 
 spec/dummy/log/
+spec/dummy/tmp/local_secret.txt

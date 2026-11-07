@@ -1,3 +1,5 @@
+require "ostruct"
+
 module EmailOverride
 
   # Intercept any outgoing mail and direct it to a specified acount
